@@ -1,0 +1,33 @@
+// package controllers
+// import (
+// 	"github.com/astaxie/beego"
+// 	_ "github.com/go-sql-driver/mysql"
+// 	"github.com/astaxie/beego/orm"
+// 	"fmt"
+// )
+// //UseInfo操作的表是user_info 
+// type Test struct{
+// 	Id int64
+// 	TName string
+// 	TTime string
+// }
+// type TestModelController struct{
+// 	beego.Controller
+// }
+// func (c *TestModelController) Get(){
+// 	orm.RegisterDataBase("default","mysql","root:123456@tcp(localhost:3306)/cost?charset=utf8")
+// 	orm.RegisterModel(new(Test))
+// 	o :=orm.NewOrm()
+// 	//原生一种读法
+// 	// var maps []orm.Params
+// 	// num,err :=o.Raw("select * from test").Values(&maps)
+// 	// o.Raw("select * from test").Values(&maps)
+// 	// for _,v :=range maps{
+// 	//	c.Ctx.WriteString(fmt.Sprintf("test :%v",v))
+// 	// }
+// 	//原生第二种读法
+// 	var users []Test
+// 	o.Raw("select * from test").QueryRows(&users)
+	
+// 	c.Ctx.WriteString(fmt.Sprintf("test :%v",users))
+// }
